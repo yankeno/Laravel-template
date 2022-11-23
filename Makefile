@@ -18,8 +18,6 @@ up:
 	docker compose exec app chmod -R 777 storage bootstrap/cache
 down:
 	docker compose down
-destroy:
-	docker-compose down --rmi all --volumes --remove-orphans
 fresh:
 	docker compose exec app php artisan migrate:fresh --seed
 app:
