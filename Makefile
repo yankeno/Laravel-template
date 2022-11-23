@@ -16,7 +16,6 @@ up:
 	docker compose up -d
 	sleep 5
 	docker compose exec app chmod -R 777 storage bootstrap/cache
-	@make fresh
 down:
 	docker compose down
 destroy:
