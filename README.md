@@ -9,7 +9,6 @@
 ## 使い方
 
 - リポジトリを `git clone`
-- `.env.example` をコピーして `.env` を作成
 - プロジェクトルートで `make install`
 
 ## 既知のエラー
