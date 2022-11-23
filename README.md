@@ -11,3 +11,9 @@
 - リポジトリを `git clone`
 - `.env.example` をコピーして `.env` を作成
 - プロジェクトルートで `make install`
+
+## 既知のエラー
+
+- Error response from daemon: unrecognized image ID
+
+`make install` 時に発生する場合あり。もう一度 `make install` を行う。
