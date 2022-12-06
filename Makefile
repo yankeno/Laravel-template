@@ -25,10 +25,11 @@ app:
 sql:
 	docker compose exec db bash -c 'mysql -u $$MYSQL_USER -p$$MYSQL_PASSWORD $$MYSQL_DATABASE'
 clear:
-	docker compose exec app php artisan cache:clear 
-	docker compose exec app php artisan config:clear 
-	docker compose exec app php artisan route:clear
+	docker compose exec app php artisan optimize:clear
 test:
 	docker compose exec app php artisan config:clear
 	docker compose exec app php artisan cache:clear
 	docker compose exec app php artisan test --env=testing
+ide-helper:
+	docker compose exec app php artisan ide-helper:generate
+	docker compose exec app php artisan ide-helper:models -N
