@@ -8,6 +8,7 @@ install:
 	docker compose exec app php artisan storage:link
 	docker compose exec app chmod -R 777 storage bootstrap/cache
 	@make fresh
+	@make ide-helper
 clean:
 	docker compose down --rmi all --volumes --remove-orphans
 build:
@@ -27,8 +28,7 @@ sql:
 clear:
 	docker compose exec app php artisan optimize:clear
 test:
-	docker compose exec app php artisan config:clear
-	docker compose exec app php artisan cache:clear
+	@make clear
 	docker compose exec app php artisan test --env=testing
 ide-helper:
 	docker compose exec app php artisan ide-helper:generate
