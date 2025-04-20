@@ -4,7 +4,8 @@ ENV MYSQL_DATABASE=laravel \
     MYSQL_USER=phper \
     MYSQL_PASSWORD=secret \
     MYSQL_ROOT_PASSWORD=secret \
-    TZ=Asia/Tokyo
+    TZ=Asia/Tokyo \
+    MYSQL_ROOT_HOST=%
 
 COPY ./my.cnf /etc/my.cnf
 RUN chmod 644 /etc/my.cnf
