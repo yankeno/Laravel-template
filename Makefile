@@ -32,3 +32,7 @@ clear:
 test:
 	@make clear
 	docker compose exec app php artisan test --env=testing
+phpstan:
+	docker compose exec app ./vendor/bin/phpstan analyse --memory-limit=1G
+phpstan-baseline:
+	docker compose exec app ./vendor/bin/phpstan analyse --memory-limit=1G --generate-baseline

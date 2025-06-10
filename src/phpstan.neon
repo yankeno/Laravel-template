@@ -1,0 +1,23 @@
+parameters:
+    level: 5
+    paths:
+        - app
+        - config
+        - database
+        - routes
+    excludePaths:
+        - vendor
+        - node_modules (?)
+        - storage
+        - bootstrap/cache
+        - tests
+        - public
+        - resources
+    reportMaybesInMethodSignatures: false
+    reportStaticMethodSignatures: false
+    ignoreErrors:
+        - '#Undefined variable: \$this#'
+        - '#Variable \$this in PHPDoc tag @var does not exist#'
+    scanFiles:
+        - vendor/laravel/framework/src/Illuminate/Foundation/helpers.php
+        - vendor/laravel/framework/src/Illuminate/Support/helpers.php
