@@ -18,9 +18,6 @@ parameters:
     ignoreErrors:
         - '#Undefined variable: \$this#'
         - '#Variable \$this in PHPDoc tag @var does not exist#'
-        - '#Call to method PHPUnit\\Framework\\Assert::assertTrue\(\) with true will always evaluate to true#'
-        - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Builder::#'
-        - '#Call to an undefined method Illuminate\\Database\\Query\\Builder::#'
     scanFiles:
         - vendor/laravel/framework/src/Illuminate/Foundation/helpers.php
         - vendor/laravel/framework/src/Illuminate/Support/helpers.php
