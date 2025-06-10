@@ -36,5 +36,3 @@ phpstan:
 	docker compose exec app ./vendor/bin/phpstan analyse --memory-limit=1G
 phpstan-baseline:
 	docker compose exec app ./vendor/bin/phpstan analyse --memory-limit=1G --generate-baseline
-analyse: phpstan
-check: phpstan
