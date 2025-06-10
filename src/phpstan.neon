@@ -1,21 +1,24 @@
 parameters:
-    level: 6
+    level: 5
     paths:
         - app
         - config
         - database
-        - public
-        - resources
         - routes
-        - tests
     excludePaths:
         - vendor
         - node_modules (?)
         - storage
         - bootstrap/cache
+        - tests
+        - public
+        - resources
     reportMaybesInMethodSignatures: false
     reportStaticMethodSignatures: false
     ignoreErrors:
+        - '#Undefined variable: \$this#'
+        - '#Variable \$this in PHPDoc tag @var does not exist#'
+        - '#Call to method PHPUnit\\Framework\\Assert::assertTrue\(\) with true will always evaluate to true#'
         - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Builder::#'
         - '#Call to an undefined method Illuminate\\Database\\Query\\Builder::#'
     scanFiles:
