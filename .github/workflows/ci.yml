@@ -28,7 +28,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
+          php-version: '8.3'
           extensions: mbstring, dom, fileinfo, mysql, zip
           coverage: none
 
@@ -58,6 +58,11 @@ jobs:
         run: |
           cd src
           ./vendor/bin/phpstan analyse --memory-limit=1G --error-format=github
+
+      - name: Run Psalm
+        run: |
+          cd src
+          ./vendor/bin/psalm --memory-limit=1G --output-format=github
 
       - name: Run Tests
         env:
