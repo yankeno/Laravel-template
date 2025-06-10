@@ -13,8 +13,8 @@ parameters:
         - node_modules (?)
         - storage
         - bootstrap/cache
-    checkMissingIterableValueType: false
-    checkGenericClassInNonGenericObjectType: false
+    reportMaybesInMethodSignatures: false
+    reportStaticMethodSignatures: false
     ignoreErrors:
         - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Builder::#'
         - '#Call to an undefined method Illuminate\\Database\\Query\\Builder::#'
