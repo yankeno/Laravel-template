@@ -1,0 +1,23 @@
+parameters:
+    level: 6
+    paths:
+        - app
+        - config
+        - database
+        - public
+        - resources
+        - routes
+        - tests
+    excludePaths:
+        - vendor
+        - node_modules
+        - storage
+        - bootstrap/cache
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    ignoreErrors:
+        - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Builder::#'
+        - '#Call to an undefined method Illuminate\\Database\\Query\\Builder::#'
+    scanFiles:
+        - vendor/laravel/framework/src/Illuminate/Foundation/helpers.php
+        - vendor/laravel/framework/src/Illuminate/Support/helpers.php
