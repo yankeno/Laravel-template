@@ -1,4 +1,4 @@
-FROM php:8.2-fpm-buster
+FROM php:8.3-fpm
 
 ENV COMPOSER_ALLOW_SUPERUSER=1 \
     COMPOSER_HOME=/composer
