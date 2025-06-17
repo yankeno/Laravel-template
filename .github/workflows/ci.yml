@@ -54,7 +54,7 @@ jobs:
           cp .env.example .env
           php artisan key:generate
 
-      - name: Run PHPStan
+      - name: Run Larastan
         run: |
           cd src
           ./vendor/bin/phpstan analyse --memory-limit=1G --error-format=github
