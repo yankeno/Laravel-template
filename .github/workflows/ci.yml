@@ -56,6 +56,18 @@ jobs:
           cp .env.example .env
           php artisan key:generate
 
+      - name: Run Laravel Pint (Auto-fix Code Style)
+        run: |
+          cd src
+          ./vendor/bin/pint
+
+      - name: Auto-commit style fixes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'style: Laravel Pintによるコードスタイル自動修正'
+          file_pattern: 'src/'
+          skip_dirty_check: false
+
       - name: Run Larastan
         run: |
           cd src
