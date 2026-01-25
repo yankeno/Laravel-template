@@ -1,13 +1,7 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
-        "config:recommended"
-    ],
-    "dependencyDashboard": true,
-    "timezone": "Asia/Tokyo",
-    "automerge": false,
-    "labels": ["renovate"],
-    "assignees": ["yankeno"],
-    "prConcurrentLimit": 5,
-    "branchConcurrentLimit": 5
-}    
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "dependencyDashboard": true,
+  "timezone": "Asia/Tokyo"
+}
+
