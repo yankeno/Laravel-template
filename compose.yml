@@ -7,7 +7,7 @@ services:
       - ./src:/data
   web:
     container_name: web
-    image: nginx:1.20-alpine
+    image: nginx:1.29-alpine
     ports:
       - 8080:80
     volumes:
