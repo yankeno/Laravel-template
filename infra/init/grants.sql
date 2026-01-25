@@ -1,0 +1,5 @@
+CREATE USER IF NOT EXISTS 'phper' @'%' IDENTIFIED BY 'secret';
+
+GRANT ALL PRIVILEGES ON laravel.* TO 'phper' @'%';
+
+FLUSH PRIVILEGES;
