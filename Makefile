@@ -8,9 +8,7 @@ install:
 	docker compose exec app sed -i 's/^DB_CONNECTION=.*/DB_CONNECTION=mysql_test/' .env.testing
 	docker compose exec app php artisan key:generate
 	docker compose exec app php artisan key:generate --env=testing
-	docker compose exec app php artisan storage:link
-	docker compose exec app chmod -R 777 storage bootstrap/cache
-	@make fresh
+	docker compose exec app php artisan migrate:fresh --seed
 clean:
 	docker compose down --rmi all --volumes --remove-orphans
 build:
@@ -21,8 +19,6 @@ up:
 	docker compose exec app chmod -R 777 storage bootstrap/cache
 down:
 	docker compose down
-fresh:
-	docker compose exec app php artisan migrate:fresh --seed
 app:
 	docker compose exec app bash
 sql:
