@@ -17,7 +17,7 @@ services:
   db:
     container_name: db
     build: ./infra/mysql
-    platform: linux/x86_64
+    platform: linux/arm64/v8
     environment:
       MYSQL_DATABASE: laravel
       MYSQL_USER: phper
@@ -33,7 +33,7 @@ services:
   db-test:
     container_name: db-test
     build: ./infra/mysql-test
-    platform: linux/x86_64
+    platform: linux/arm64/v8
     environment:
       MYSQL_DATABASE: laravel
       MYSQL_USER: phper
@@ -44,6 +44,6 @@ services:
     volumes:
       - ./infra/init:/docker-entrypoint-initdb.d
     ports:
-      - 33061:3306
+      - 33060:3306
 volumes:
   db-store:
