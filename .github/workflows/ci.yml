@@ -62,7 +62,7 @@ jobs:
           ./vendor/bin/pint
 
       - name: Auto-commit style fixes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: 'style: Laravel Pintによるコードスタイル自動修正'
           file_pattern: 'src/'
