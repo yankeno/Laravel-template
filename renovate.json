@@ -7,5 +7,8 @@
   "labels": ["renovate"],
   "reviewers": ["yankeno"],
   "prConcurrentLimit": 5,
-  "branchConcurrentLimit": 5
+  "branchConcurrentLimit": 5,
+  "vulnerabilityAlerts": {
+    "enabled": true
+  }
 }
