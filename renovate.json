@@ -6,7 +6,7 @@
   "automerge": false,
   "labels": ["renovate"],
   "reviewers": ["yankeno"],
-  "prConcurrentLimit": 10,
+  "prConcurrentLimit": 5,
   "constraints": {
     "php": "8.4.*",
     "composer": "2.9.*"
