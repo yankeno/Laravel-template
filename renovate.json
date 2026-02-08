@@ -8,7 +8,12 @@
   "reviewers": ["yankeno"],
   "prConcurrentLimit": 5,
   "branchConcurrentLimit": 5,
+  "constraints": {
+    "php": "8.4.*",
+    "composer": "2.9.*"
+  },
   "vulnerabilityAlerts": {
+    "labels": ["security"],
     "enabled": true
   }
 }
