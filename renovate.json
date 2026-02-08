@@ -14,8 +14,6 @@
   },
   "vulnerabilityAlerts": {
     "labels": ["security"],
-    "enabled": true,
-    "prPriority": 10,
-    "prConcurrentLimit": 0
+    "enabled": true
   }
 }
