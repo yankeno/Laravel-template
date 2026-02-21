@@ -4,7 +4,6 @@
   "dependencyDashboard": true,
   "timezone": "Asia/Tokyo",
   "automerge": false,
-  "rangeStrategy": "bump",
   "labels": ["renovate"],
   "reviewers": ["yankeno"],
   "prConcurrentLimit": 5,
