@@ -14,12 +14,14 @@
     <projectFiles>
         <directory name="app" />
         <directory name="config" />
-        <directory name="database" />
+        <directory name="database/factories" />
+        <directory name="database/seeders" />
         <directory name="routes" />
         <ignoreFiles>
             <directory name="vendor" />
             <directory name="storage" />
             <directory name="bootstrap/cache" />
+            <directory name="database/migrations" />
             <directory name="tests" />
             <directory name="public" />
             <directory name="resources" />
