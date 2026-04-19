@@ -36,7 +36,9 @@ class User extends Authenticatable
     /**
      * Get the attributes that should be cast.
      *
-     * @return array<string, string>
+     * @return string[]
+     *
+     * @psalm-return array{email_verified_at: 'datetime', password: 'hashed'}
      */
     protected function casts(): array
     {
