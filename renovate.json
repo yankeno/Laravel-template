@@ -5,6 +5,7 @@
   "timezone": "Asia/Tokyo",
   "automerge": false,
   "rangeStrategy": "update-lockfile",
+  "rebaseWhen": "behind-base-branch",
   "labels": ["renovate"],
   "reviewers": ["yankeno"],
   "prConcurrentLimit": 5,
