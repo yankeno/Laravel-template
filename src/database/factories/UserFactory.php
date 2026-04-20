@@ -19,8 +19,11 @@ class UserFactory extends Factory
     /**
      * Define the model's default state.
      *
-     * @return array<string, mixed>
+     * @return (\Carbon\CarbonInterface|string)[]
+     *
+     * @psalm-return array{name: string, email: string, email_verified_at: \Carbon\CarbonInterface, password: string, remember_token: string}
      */
+    #[\Override]
     public function definition(): array
     {
         return [
@@ -37,7 +40,7 @@ class UserFactory extends Factory
      */
     public function unverified(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return $this->state(fn(array $attributes) => [
             'email_verified_at' => null,
         ]);
     }
