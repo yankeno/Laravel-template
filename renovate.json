@@ -4,8 +4,17 @@
   "dependencyDashboard": true,
   "timezone": "Asia/Tokyo",
   "automerge": false,
+  "rangeStrategy": "update-lockfile",
+  "rebaseWhen": "behind-base-branch",
   "labels": ["renovate"],
   "reviewers": ["yankeno"],
   "prConcurrentLimit": 5,
-  "branchConcurrentLimit": 5
+  "constraints": {
+    "php": "8.4.*",
+    "composer": "2.9.*"
+  },
+  "vulnerabilityAlerts": {
+    "addLabels": ["security"],
+    "enabled": true
+  }
 }

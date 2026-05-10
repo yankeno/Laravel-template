@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "laravel-pint.enable": true,
+  "laravel-pint.enableDebugLogs": true,
+  "laravel-pint.configPath": "src/pint.json",
+  "[php]": {
+    "editor.defaultFormatter": "open-southeners.laravel-pint"
+  },
+  "makefile.configureOnOpen": false
+}
