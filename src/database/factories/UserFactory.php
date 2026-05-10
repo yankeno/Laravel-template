@@ -2,12 +2,14 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
+use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
+ * @extends Factory<User>
  */
 class UserFactory extends Factory
 {
@@ -19,9 +21,9 @@ class UserFactory extends Factory
     /**
      * Define the model's default state.
      *
-     * @return (\Carbon\CarbonInterface|string)[]
+     * @return (CarbonInterface|string)[]
      *
-     * @psalm-return array{name: string, email: string, email_verified_at: \Carbon\CarbonInterface, password: string, remember_token: string}
+     * @psalm-return array{name: string, email: string, email_verified_at: CarbonInterface, password: string, remember_token: string}
      */
     #[\Override]
     public function definition(): array
