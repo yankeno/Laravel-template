@@ -1,10 +1,10 @@
-# Laravel12 のテンプレート
+# Laravel13 のテンプレート
 
 ## 各種バージョン
 
-- PHP 8.3
-- MySQL 8.0
-- nginx 1.20.2
+- PHP 8.4
+- MySQL 8.4
+- nginx 1.3
 
 ## 使い方
 
