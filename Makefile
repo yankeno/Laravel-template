@@ -4,10 +4,7 @@ install:
 	@make up
 	docker compose exec app composer install
 	docker compose exec app cp .env.example .env
-	docker compose exec app cp .env.example .env.testing
-	docker compose exec app sed -i 's/^DB_CONNECTION=.*/DB_CONNECTION=mysql_test/' .env.testing
 	docker compose exec app php artisan key:generate
-	docker compose exec app php artisan key:generate --env=testing
 	docker compose exec app php artisan migrate:fresh --seed
 clean:
 	docker compose down --rmi all --volumes --remove-orphans
@@ -27,7 +24,7 @@ clear:
 	docker compose exec app php artisan optimize:clear
 test:
 	@make clear
-	docker compose exec app php artisan test --env=testing
+	docker compose exec app php artisan test
 phpstan:
 	docker compose exec -T app ./vendor/bin/phpstan analyse --memory-limit=1G
 phpstan-baseline:
