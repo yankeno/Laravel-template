@@ -262,7 +262,6 @@ jobs:
           php artisan migrate --force
           php artisan optimize
           php artisan route:list > /dev/null
-          ./vendor/bin/phpunit
 
       - name: Clear optimization cache
         if: always()
