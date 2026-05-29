@@ -11,7 +11,7 @@
   "prConcurrentLimit": 5,
   "constraints": {
     "php": "8.5.*",
-    "composer": "2.9.*"
+    "composer": "2.10.*"
   },
   "vulnerabilityAlerts": {
     "addLabels": ["security"],
